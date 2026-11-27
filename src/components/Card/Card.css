@@ -1,0 +1,69 @@
+.card{
+    width: 90%;
+    max-width: 400px;
+    height: 170px;
+    background-color: rgb(20,26,31);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 2px 2px 10px black,2px 2px 20px black;
+    border-radius: 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 10px;
+}
+.card:hover{
+    box-shadow: 2px 2px 10px rgb(34, 185, 215),2px 2px 20px rgb(13, 163, 193);
+}
+.hovecard img{
+    height: 80%;
+    filter: drop-shadow(2px 2px 10px black);
+}
+.hovecard{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,rgba(121, 205, 220, 0.486),rgba(12, 17, 20, 0.495));
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(7px);
+}
+.card:hover .hovecard{
+    transform: translateY(0%);
+    
+}
+.card h1{
+     background: linear-gradient(to right,rgb(14, 170, 206),white);
+    background-clip: text;
+    color: transparent;
+}
+.rightabout{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width:750px) {
+    #about{
+        flex-direction: column;
+    }
+    .leftabout{
+        width: 100%;
+        padding: 10%;
+    }
+    .rightabout{
+        width: 100%;
+    }
+}
